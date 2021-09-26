@@ -36,6 +36,7 @@
           "Microsoft.EntityFrameworkCore.Tools": "5.0.10",
           "Microsoft.Extensions.Hosting": "5.0.0",
           "RabbitMQ.Client": "6.2.2",
+          "Services": "1.0.0",
           "WebApiBackgroundServices.Services": "1.0.0",
           "Microsoft.AspNetCore.Antiforgery": "3.1.0.0",
           "Microsoft.AspNetCore.Authentication.Abstractions": "3.1.0.0",
@@ -1806,11 +1807,23 @@
           "System.Xml.XmlDocument": "4.3.0"
         }
       },
+      "Services/1.0.0": {
+        "dependencies": {
+          "RabbitMQ.Client": "6.2.2"
+        },
+        "runtime": {
+          "Services.dll": {}
+        },
+        "compile": {
+          "Services.dll": {}
+        }
+      },
       "WebApiBackgroundServices.Services/1.0.0": {
         "dependencies": {
           "Microsoft.Extensions.Hosting.Abstractions": "5.0.0",
           "Microsoft.Extensions.Options": "5.0.0",
-          "RabbitMQ.Client": "6.2.2"
+          "RabbitMQ.Client": "6.2.2",
+          "Services": "1.0.0"
         },
         "runtime": {
           "WebApiBackgroundServices.Services.dll": {}
@@ -4154,6 +4167,11 @@
       "sha512": "sha512-MYoTCP7EZ98RrANESW05J5ZwskKDoN0AuZ06ZflnowE50LTpbR5yRg3tHckTVm5j/m47stuGgCrCHWePyHS70Q==",
       "path": "system.xml.xmlserializer/4.3.0",
       "hashPath": "system.xml.xmlserializer.4.3.0.nupkg.sha512"
+    },
+    "Services/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
     },
     "WebApiBackgroundServices.Services/1.0.0": {
       "type": "project",

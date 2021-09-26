@@ -13,6 +13,7 @@ using System.Threading.Tasks;
 using Microsoft.EntityFrameworkCore;
 using BankTransfer.Database;
 using WebApiBackgroundServices.Services;
+using BankTransfer.Extensions;
 
 namespace BankTransfer
 {
@@ -30,7 +31,7 @@ namespace BankTransfer
         {
             services.AddControllers();
             services.AddDbContext<DataContext>(opcoes => opcoes.UseSqlServer(Configuration["Data:ConnectionStrings:DefaultConnection"]));
-            
+            DependencyInjectionExtension.ConfigureService(services);
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

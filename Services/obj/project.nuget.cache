@@ -1,0 +1,12 @@
+{
+  "version": 2,
+  "dgSpecHash": "auOg2Vy8Y+xztJE/LYyj5PhAe4nt2PtBwHaTx4+283bnPr/b4v+56bRZLza3rEQHtuuVxwMJVXUT40Kt4pszyQ==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\maria\\source\\repos\\BankTransfer\\Services\\Services.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\maria\\.nuget\\packages\\rabbitmq.client\\6.2.2\\rabbitmq.client.6.2.2.nupkg.sha512",
+    "C:\\Users\\maria\\.nuget\\packages\\system.memory\\4.5.4\\system.memory.4.5.4.nupkg.sha512",
+    "C:\\Users\\maria\\.nuget\\packages\\system.threading.channels\\4.7.1\\system.threading.channels.4.7.1.nupkg.sha512"
+  ],
+  "logs": []
+}

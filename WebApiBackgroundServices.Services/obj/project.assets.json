@@ -101,6 +101,19 @@
         "runtime": {
           "lib/netcoreapp3.0/System.Threading.Channels.dll": {}
         }
+      },
+      "Services/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v3.1",
+        "dependencies": {
+          "RabbitMQ.Client": "6.2.2"
+        },
+        "compile": {
+          "bin/placeholder/Services.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/Services.dll": {}
+        }
       }
     }
   },
@@ -296,13 +309,19 @@
         "useSharedDesignerContext.txt",
         "version.txt"
       ]
+    },
+    "Services/1.0.0": {
+      "type": "project",
+      "path": "../Services/Services.csproj",
+      "msbuildProject": "../Services/Services.csproj"
     }
   },
   "projectFileDependencyGroups": {
     ".NETCoreApp,Version=v3.1": [
       "Microsoft.Extensions.Hosting.Abstractions >= 5.0.0",
       "Microsoft.Extensions.Options >= 5.0.0",
-      "RabbitMQ.Client >= 6.2.2"
+      "RabbitMQ.Client >= 6.2.2",
+      "Services >= 1.0.0"
     ]
   },
   "packageFolders": {
@@ -336,7 +355,11 @@
       "frameworks": {
         "netcoreapp3.1": {
           "targetAlias": "netcoreapp3.1",
-          "projectReferences": {}
+          "projectReferences": {
+            "C:\\Users\\maria\\source\\repos\\BankTransfer\\Services\\Services.csproj": {
+              "projectPath": "C:\\Users\\maria\\source\\repos\\BankTransfer\\Services\\Services.csproj"
+            }
+          }
         }
       },
       "warningProperties": {
