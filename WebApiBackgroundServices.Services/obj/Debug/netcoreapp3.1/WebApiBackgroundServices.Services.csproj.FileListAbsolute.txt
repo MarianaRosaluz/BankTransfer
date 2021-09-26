@@ -1,0 +1,10 @@
+C:\Users\maria\source\repos\BankTransfer\WebApiBackgroundServices.Services\bin\Debug\netcoreapp3.1\WebApiBackgroundServices.Services.deps.json
+C:\Users\maria\source\repos\BankTransfer\WebApiBackgroundServices.Services\bin\Debug\netcoreapp3.1\WebApiBackgroundServices.Services.dll
+C:\Users\maria\source\repos\BankTransfer\WebApiBackgroundServices.Services\bin\Debug\netcoreapp3.1\WebApiBackgroundServices.Services.pdb
+C:\Users\maria\source\repos\BankTransfer\WebApiBackgroundServices.Services\obj\Debug\netcoreapp3.1\WebApiBackgroundServices.Services.csproj.AssemblyReference.cache
+C:\Users\maria\source\repos\BankTransfer\WebApiBackgroundServices.Services\obj\Debug\netcoreapp3.1\WebApiBackgroundServices.Services.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\maria\source\repos\BankTransfer\WebApiBackgroundServices.Services\obj\Debug\netcoreapp3.1\WebApiBackgroundServices.Services.AssemblyInfoInputs.cache
+C:\Users\maria\source\repos\BankTransfer\WebApiBackgroundServices.Services\obj\Debug\netcoreapp3.1\WebApiBackgroundServices.Services.AssemblyInfo.cs
+C:\Users\maria\source\repos\BankTransfer\WebApiBackgroundServices.Services\obj\Debug\netcoreapp3.1\WebApiBackgroundServices.Services.csproj.CoreCompileInputs.cache
+C:\Users\maria\source\repos\BankTransfer\WebApiBackgroundServices.Services\obj\Debug\netcoreapp3.1\WebApiBackgroundServices.Services.dll
+C:\Users\maria\source\repos\BankTransfer\WebApiBackgroundServices.Services\obj\Debug\netcoreapp3.1\WebApiBackgroundServices.Services.pdb
