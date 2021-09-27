@@ -96,3 +96,5 @@ C:\Users\maria\source\repos\BankTransfer\BankTransfer\bin\Debug\netcoreapp3.1\We
 C:\Users\maria\source\repos\BankTransfer\BankTransfer\bin\Debug\netcoreapp3.1\WebApiBackgroundServices.Services.pdb
 C:\Users\maria\source\repos\BankTransfer\BankTransfer\bin\Debug\netcoreapp3.1\Services.dll
 C:\Users\maria\source\repos\BankTransfer\BankTransfer\bin\Debug\netcoreapp3.1\Services.pdb
+C:\Users\maria\source\repos\BankTransfer\BankTransfer\bin\Debug\netcoreapp3.1\Domain.dll
+C:\Users\maria\source\repos\BankTransfer\BankTransfer\bin\Debug\netcoreapp3.1\Domain.pdb

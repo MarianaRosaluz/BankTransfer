@@ -1,4 +1,5 @@
-﻿using BankTransfer.Database;
+﻿using Domain.Database.Enum;
+using Domain.Entities;
 using System;
 
 namespace BankTransfer.dto
@@ -15,7 +16,7 @@ namespace BankTransfer.dto
             transfer.accountOrigin = this.accountOrigin;
             transfer.accountDestination = this.accountDestination;
             transfer.value = this.value;
-            transfer.status = "In Queue";
+            transfer.status = Status.In_Queue;
             transfer.uuid = Guid.NewGuid();
 
             return transfer;

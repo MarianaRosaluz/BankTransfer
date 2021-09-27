@@ -3,7 +3,7 @@ using Microsoft.EntityFrameworkCore.Migrations;
 
 namespace BankTransfer.Migrations
 {
-    public partial class InitialCreate : Migration
+    public partial class intialmigrtion : Migration
     {
         protected override void Up(MigrationBuilder migrationBuilder)
         {
@@ -17,7 +17,7 @@ namespace BankTransfer.Migrations
                     accountOrigin = table.Column<string>(type: "nvarchar(max)", nullable: true),
                     accountDestination = table.Column<string>(type: "nvarchar(max)", nullable: true),
                     value = table.Column<double>(type: "float", nullable: false),
-                    status = table.Column<string>(type: "nvarchar(max)", nullable: true),
+                    status = table.Column<int>(type: "int", nullable: false),
                     message = table.Column<string>(type: "nvarchar(max)", nullable: true)
                 },
                 constraints: table =>

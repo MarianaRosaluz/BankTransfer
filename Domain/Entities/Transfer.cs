@@ -1,11 +1,9 @@
-﻿using BankTransfer.dto;
+﻿using Domain.Database.Enum;
 using System;
-using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
-using System.Linq;
-using System.Threading.Tasks;
 
-namespace BankTransfer.Database
+
+namespace Domain.Entities
 {
     public class Transfer
     {
@@ -15,7 +13,7 @@ namespace BankTransfer.Database
         public string accountOrigin { get; set; }
         public string accountDestination { get; set; }
         public double value { get; set; }
-        public string status { get; set; }
+        public Status status { get; set; }
         public string message { get; set; }
 
        

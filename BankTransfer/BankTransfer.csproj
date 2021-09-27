@@ -16,6 +16,7 @@
   </ItemGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\Domain\Domain.csproj" />
     <ProjectReference Include="..\Services\Services.csproj" />
     <ProjectReference Include="..\WebApiBackgroundServices.Services\WebApiBackgroundServices.Services.csproj" />
   </ItemGroup>

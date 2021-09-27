@@ -11,3 +11,5 @@ C:\Users\maria\source\repos\BankTransfer\WebApiBackgroundServices.Services\obj\D
 C:\Users\maria\source\repos\BankTransfer\WebApiBackgroundServices.Services\bin\Debug\netcoreapp3.1\Services.dll
 C:\Users\maria\source\repos\BankTransfer\WebApiBackgroundServices.Services\bin\Debug\netcoreapp3.1\Services.pdb
 C:\Users\maria\source\repos\BankTransfer\WebApiBackgroundServices.Services\obj\Debug\netcoreapp3.1\WebApiBackgroundServices.Services.csproj.CopyComplete
+C:\Users\maria\source\repos\BankTransfer\WebApiBackgroundServices.Services\bin\Debug\netcoreapp3.1\Domain.dll
+C:\Users\maria\source\repos\BankTransfer\WebApiBackgroundServices.Services\bin\Debug\netcoreapp3.1\Domain.pdb

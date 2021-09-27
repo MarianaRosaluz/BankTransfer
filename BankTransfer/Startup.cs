@@ -11,9 +11,10 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.EntityFrameworkCore;
-using BankTransfer.Database;
 using WebApiBackgroundServices.Services;
 using BankTransfer.Extensions;
+using Domain.Database;
+using Domain.Repository;
 
 namespace BankTransfer
 {

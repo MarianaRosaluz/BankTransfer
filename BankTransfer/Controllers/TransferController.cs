@@ -1,17 +1,18 @@
-﻿using BankTransfer.Database;
-using BankTransfer.dto;
+﻿using BankTransfer.dto;
+using Domain.Database.Enum;
+using Domain.Entities;
+using Domain.Repository;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
 using RabbitMQ.Client;
 using Services.Services;
 using System;
-using System.Text;
-using System.Text.Json;
+using System.Linq;
 
 namespace BankTransfer.Controllers
 {
 
-    [Route("api/[controller]")]
+    [Route("api/fund-transfer/")]
     [ApiController]
     public class TransferController: ControllerBase 
     {
@@ -32,19 +33,44 @@ namespace BankTransfer.Controllers
         {
             try
             {
-                _rabbitMqService.sendMessage("transferQueue", transferDTO);
-               Transfer transfer =  transferDTO.ConvertTransferDtoToTransfer();
-
+                Transfer transfer = transferDTO.ConvertTransferDtoToTransfer();
                 _dataContext.Add(transfer);
                 _dataContext.SaveChanges();
-                var aux = transfer.uuid;
-                return Accepted(transferDTO);
+                _rabbitMqService.sendMessage("transferQueue", transfer);
+               
+
+
+               
+               
+                return Accepted(transfer.uuid);
 
             }
             catch (Exception ex)
             {
                 _logger.LogError("Erro ao tentar criar uma nova trnsferencia", ex);
 
+                return new StatusCodeResult(500);
+            }
+        }
+        
+        [HttpGet]
+        [Route("{transactionId}")]
+        public IActionResult GetStatusTransfer(Guid transactionId)
+        {
+            try
+            {
+
+                var transfer = _dataContext.transfers.Where(x => x.uuid == transactionId).FirstOrDefault();
+
+                if(transfer.status == Status.Error)
+                {
+                    return Ok(Enum.GetName(typeof(Status),transfer.status));
+                }
+                
+                return Ok(Enum.GetName(typeof(Status), transfer.status));
+            }
+            catch (Exception ex)
+            {
                 return new StatusCodeResult(500);
             }
         }
