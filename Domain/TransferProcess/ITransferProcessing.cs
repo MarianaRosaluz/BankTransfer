@@ -2,11 +2,12 @@
 using System;
 using System.Collections.Generic;
 using System.Text;
+using System.Threading.Tasks;
 
 namespace Domain.TransferProcess
 {
     public interface ITransferProcessing
     {
-        public bool ChangeStatus(Status status, Guid uuidTransfer, string message = null);
+        public  Task<bool> ChangeStatus(Status status, Guid uuidTransfer, string message = null);
     }
 }

@@ -8,6 +8,7 @@ using RabbitMQ.Client;
 using Services.Services;
 using System;
 using System.Linq;
+using System.Net;
 
 namespace BankTransfer.Controllers
 {
@@ -20,6 +21,7 @@ namespace BankTransfer.Controllers
         private ILogger<TransferController> _logger;
         private readonly DataContext _dataContext;
         private readonly IRabbitMqService _rabbitMqService;
+        
 
         public TransferController(ILogger<TransferController> logger, DataContext dataContext, IRabbitMqService rabbitMqService)
         {
@@ -31,25 +33,23 @@ namespace BankTransfer.Controllers
         [HttpPost]
         public IActionResult InsertTransfer([FromBody] TransferDTO transferDTO)
         {
+            Transfer transfer = new Transfer();
             try
             {
-                Transfer transfer = transferDTO.ConvertTransferDtoToTransfer();
+                 transfer = transferDTO.ConvertTransferDtoToTransfer();
                 _dataContext.Add(transfer);
                 _dataContext.SaveChanges();
                 _rabbitMqService.sendMessage("transferQueue", transfer);
-               
 
+                return Accepted(new { transactionId = transfer.uuid });
 
-               
-               
-                return Accepted(transfer.uuid);
 
             }
             catch (Exception ex)
             {
+                _dataContext.Remove(transfer);
                 _logger.LogError("Erro ao tentar criar uma nova trnsferencia", ex);
-
-                return new StatusCodeResult(500);
+                return StatusCode((int)HttpStatusCode.InternalServerError,ex.Message);
             }
         }
         
