@@ -1,7 +1,7 @@
 ﻿using System;
 using Microsoft.EntityFrameworkCore.Migrations;
 
-namespace BankTransfer.Migrations
+namespace BankTransferApi.Migrations
 {
     public partial class intialmigrtion : Migration
     {

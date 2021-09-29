@@ -1,10 +1,8 @@
-﻿using Domain.Database.Enum;
+﻿using core.domain;
 using System;
-using System.Collections.Generic;
-using System.Text;
 using System.Threading.Tasks;
 
-namespace Domain.TransferProcess
+namespace core.TransferProcess
 {
     public interface ITransferProcessing
     {

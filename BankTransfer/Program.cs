@@ -1,15 +1,9 @@
 using Microsoft.AspNetCore.Hosting;
-using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
-using Microsoft.Extensions.Logging;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
-using WebApiBackgroundServices.Services;
+using worker.backgroundjob;
 
-namespace BankTransfer
+namespace BankTransferApi
 {
     public class Program
     {
@@ -25,7 +19,7 @@ namespace BankTransfer
                     webBuilder.UseStartup<Startup>();
                 }).ConfigureServices(services => {
 
-                    services.AddHostedService<ProcessMessageConsumer>();
+                    services.AddHostedService<ProcessMessageConsumerTransfer>();
 
                 });
     }

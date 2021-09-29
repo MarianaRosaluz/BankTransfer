@@ -1,8 +1,7 @@
-﻿using Domain.Database.Enum;
-using Domain.Entities;
+﻿using core.domain;
 using System;
 
-namespace BankTransfer.dto
+namespace BankTransferApi.dto
 {
     public class TransferDTO
     {

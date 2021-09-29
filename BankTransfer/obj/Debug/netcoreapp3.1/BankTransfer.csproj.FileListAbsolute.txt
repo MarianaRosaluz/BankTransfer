@@ -92,11 +92,11 @@ C:\Users\maria\source\repos\BankTransfer\BankTransfer\bin\Debug\netcoreapp3.1\ru
 C:\Users\maria\source\repos\BankTransfer\BankTransfer\bin\Debug\netcoreapp3.1\runtimes\win\lib\netcoreapp2.0\System.Security.AccessControl.dll
 C:\Users\maria\source\repos\BankTransfer\BankTransfer\bin\Debug\netcoreapp3.1\runtimes\unix\lib\netcoreapp2.1\System.Security.Principal.Windows.dll
 C:\Users\maria\source\repos\BankTransfer\BankTransfer\bin\Debug\netcoreapp3.1\runtimes\win\lib\netcoreapp2.1\System.Security.Principal.Windows.dll
-C:\Users\maria\source\repos\BankTransfer\BankTransfer\bin\Debug\netcoreapp3.1\WebApiBackgroundServices.Services.dll
-C:\Users\maria\source\repos\BankTransfer\BankTransfer\bin\Debug\netcoreapp3.1\WebApiBackgroundServices.Services.pdb
 C:\Users\maria\source\repos\BankTransfer\BankTransfer\bin\Debug\netcoreapp3.1\Services.dll
 C:\Users\maria\source\repos\BankTransfer\BankTransfer\bin\Debug\netcoreapp3.1\Services.pdb
 C:\Users\maria\source\repos\BankTransfer\BankTransfer\bin\Debug\netcoreapp3.1\Domain.dll
 C:\Users\maria\source\repos\BankTransfer\BankTransfer\bin\Debug\netcoreapp3.1\Domain.pdb
 C:\Users\maria\source\repos\BankTransfer\BankTransfer\bin\Debug\netcoreapp3.1\RestEase.dll
 C:\Users\maria\source\repos\BankTransfer\BankTransfer\bin\Debug\netcoreapp3.1\RestEase.HttpClientFactory.dll
+C:\Users\maria\source\repos\BankTransfer\BankTransfer\bin\Debug\netcoreapp3.1\worker.dll
+C:\Users\maria\source\repos\BankTransfer\BankTransfer\bin\Debug\netcoreapp3.1\worker.pdb

@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "VPtVY/omWrulwdBuuhQ0MncM2mX3xJX08fVaqJdJiIIU9BgQypD5R3s0ua34Qy3UTsjb5pL22zdlPhMn6F7ncg==",
+  "dgSpecHash": "n91OIbU+PKR0sAseEEcThE3voy1f0rGwmfUOysOc48CtTEjWMX2VVl4XS/c0mbuN0me1etzwu3sQQo4Z8zDKcA==",
   "success": true,
-  "projectFilePath": "C:\\Users\\maria\\source\\repos\\BankTransfer\\Domain\\Domain.csproj",
+  "projectFilePath": "C:\\Users\\maria\\source\\repos\\BankTransfer\\Domain\\core.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\maria\\.nuget\\packages\\microsoft.aspnetcore.http.abstractions\\2.2.0\\microsoft.aspnetcore.http.abstractions.2.2.0.nupkg.sha512",
     "C:\\Users\\maria\\.nuget\\packages\\microsoft.aspnetcore.http.features\\2.2.0\\microsoft.aspnetcore.http.features.2.2.0.nupkg.sha512",
@@ -22,13 +22,16 @@
     "C:\\Users\\maria\\.nuget\\packages\\microsoft.extensions.primitives\\5.0.0\\microsoft.extensions.primitives.5.0.0.nupkg.sha512",
     "C:\\Users\\maria\\.nuget\\packages\\microsoft.net.http.headers\\2.2.0\\microsoft.net.http.headers.2.2.0.nupkg.sha512",
     "C:\\Users\\maria\\.nuget\\packages\\newtonsoft.json\\11.0.1\\newtonsoft.json.11.0.1.nupkg.sha512",
+    "C:\\Users\\maria\\.nuget\\packages\\rabbitmq.client\\6.2.2\\rabbitmq.client.6.2.2.nupkg.sha512",
     "C:\\Users\\maria\\.nuget\\packages\\restease\\1.5.5\\restease.1.5.5.nupkg.sha512",
     "C:\\Users\\maria\\.nuget\\packages\\restease.httpclientfactory\\1.5.5\\restease.httpclientfactory.1.5.5.nupkg.sha512",
     "C:\\Users\\maria\\.nuget\\packages\\system.buffers\\4.5.0\\system.buffers.4.5.0.nupkg.sha512",
     "C:\\Users\\maria\\.nuget\\packages\\system.collections.immutable\\5.0.0\\system.collections.immutable.5.0.0.nupkg.sha512",
     "C:\\Users\\maria\\.nuget\\packages\\system.componentmodel.annotations\\5.0.0\\system.componentmodel.annotations.5.0.0.nupkg.sha512",
     "C:\\Users\\maria\\.nuget\\packages\\system.diagnostics.diagnosticsource\\5.0.1\\system.diagnostics.diagnosticsource.5.0.1.nupkg.sha512",
-    "C:\\Users\\maria\\.nuget\\packages\\system.text.encodings.web\\4.5.0\\system.text.encodings.web.4.5.0.nupkg.sha512"
+    "C:\\Users\\maria\\.nuget\\packages\\system.memory\\4.5.4\\system.memory.4.5.4.nupkg.sha512",
+    "C:\\Users\\maria\\.nuget\\packages\\system.text.encodings.web\\4.5.0\\system.text.encodings.web.4.5.0.nupkg.sha512",
+    "C:\\Users\\maria\\.nuget\\packages\\system.threading.channels\\4.7.1\\system.threading.channels.4.7.1.nupkg.sha512"
   ],
   "logs": []
 }

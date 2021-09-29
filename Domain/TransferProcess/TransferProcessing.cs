@@ -1,24 +1,18 @@
-﻿using Domain.Database;
-using Domain.Database.Enum;
-using Domain.dto.Account;
-using Domain.Entities;
-using Domain.Repository;
-using Domain.services;
-using Microsoft.AspNetCore.Mvc;
-using Microsoft.Extensions.DependencyInjection;
+﻿using core.domain;
+using core.dto.convert;
+using core.service.accountService;
+using core.service.repositories;
 using RestEase;
 using System;
-using System.Collections.Generic;
 using System.Linq;
-using System.Net;
 using System.Threading.Tasks;
 
-namespace Domain.TransferProcess
+namespace core.TransferProcess
 {
     public class TransferProcessing: ITransferProcessing
     {
         ITransferRepository _transferRepository;
-
+        CovertTransferToTransactionDTO _covertTransferToTransactionDTO;
         public TransferProcessing(ITransferRepository transferRepository)
         {
             _transferRepository = transferRepository;
@@ -54,8 +48,8 @@ namespace Domain.TransferProcess
 
 
 
-
-                var transactions = CovertTransferToTransactionDTOList(transfer);
+                CovertTransferToTransactionDTO _covertTransferToTransactionDTO = new CovertTransferToTransactionDTO();
+                var transactions = _covertTransferToTransactionDTO.CovertTransferToTransactionDTOList(transfer);
                 foreach (var trans in transactions)
                 {
                     try
@@ -81,18 +75,6 @@ namespace Domain.TransferProcess
             }
 
         }
-        public List<TransactionDto> CovertTransferToTransactionDTOList(Transfer transfer)
-        {
-            List<TransactionDto> transactions = new List<TransactionDto>();
-            TransactionDto transactionDebit = new TransactionDto(transfer.accountOrigin, transfer.value, "Debit");
-            transactions.Add(transactionDebit);
-            TransactionDto transactionCredit = new TransactionDto(transfer.accountDestination, transfer.value, "Credit");
-            transactions.Add(transactionCredit);
-
-            return transactions;
-
-
-
-        }
+        
     }
 }

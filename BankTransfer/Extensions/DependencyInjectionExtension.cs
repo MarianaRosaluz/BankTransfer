@@ -1,11 +1,10 @@
-﻿using Domain.Repository;
-using Domain.services;
-using Domain.TransferProcess;
+﻿using core.service.rabbitMQ;
+using core.service.repositories;
+using core.TransferProcess;
 using Microsoft.Extensions.DependencyInjection;
-using Services.Services;
 
 
-namespace BankTransfer.Extensions
+namespace BankTransferApi.Extensions
 {
     public static class DependencyInjectionExtension
     {

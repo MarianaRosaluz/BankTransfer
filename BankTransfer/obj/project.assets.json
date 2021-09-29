@@ -1868,54 +1868,39 @@
           "lib/netstandard1.3/System.Xml.XmlSerializer.dll": {}
         }
       },
-      "Domain/1.0.0": {
+      "core/1.0.0": {
         "type": "project",
         "framework": ".NETCoreApp,Version=v3.1",
         "dependencies": {
           "Microsoft.AspNetCore.Mvc.Abstractions": "2.2.0",
           "Microsoft.EntityFrameworkCore": "5.0.10",
+          "RabbitMQ.Client": "6.2.2",
           "RestEase": "1.5.5",
           "RestEase.HttpClientFactory": "1.5.5"
         },
         "compile": {
-          "bin/placeholder/Domain.dll": {}
+          "bin/placeholder/core.dll": {}
         },
         "runtime": {
-          "bin/placeholder/Domain.dll": {}
+          "bin/placeholder/core.dll": {}
         }
       },
-      "Services/1.0.0": {
+      "worker/1.0.0": {
         "type": "project",
         "framework": ".NETCoreApp,Version=v3.1",
         "dependencies": {
-          "Microsoft.AspNetCore.Mvc.Abstractions": "2.2.0",
-          "RabbitMQ.Client": "6.2.2",
-          "RestEase": "1.5.5"
-        },
-        "compile": {
-          "bin/placeholder/Services.dll": {}
-        },
-        "runtime": {
-          "bin/placeholder/Services.dll": {}
-        }
-      },
-      "WebApiBackgroundServices.Services/1.0.0": {
-        "type": "project",
-        "framework": ".NETCoreApp,Version=v3.1",
-        "dependencies": {
-          "Domain": "1.0.0",
           "Microsoft.EntityFrameworkCore": "5.0.10",
           "Microsoft.Extensions.DependencyInjection": "5.0.2",
           "Microsoft.Extensions.Hosting.Abstractions": "5.0.0",
           "Microsoft.Extensions.Options": "5.0.0",
           "RabbitMQ.Client": "6.2.2",
-          "Services": "1.0.0"
+          "core": "1.0.0"
         },
         "compile": {
-          "bin/placeholder/WebApiBackgroundServices.Services.dll": {}
+          "bin/placeholder/worker.dll": {}
         },
         "runtime": {
-          "bin/placeholder/WebApiBackgroundServices.Services.dll": {}
+          "bin/placeholder/worker.dll": {}
         }
       }
     }
@@ -6554,32 +6539,26 @@
         "system.xml.xmlserializer.nuspec"
       ]
     },
-    "Domain/1.0.0": {
+    "core/1.0.0": {
       "type": "project",
-      "path": "../Domain/Domain.csproj",
-      "msbuildProject": "../Domain/Domain.csproj"
+      "path": "../Domain/core.csproj",
+      "msbuildProject": "../Domain/core.csproj"
     },
-    "Services/1.0.0": {
+    "worker/1.0.0": {
       "type": "project",
-      "path": "../Services/Services.csproj",
-      "msbuildProject": "../Services/Services.csproj"
-    },
-    "WebApiBackgroundServices.Services/1.0.0": {
-      "type": "project",
-      "path": "../WebApiBackgroundServices.Services/WebApiBackgroundServices.Services.csproj",
-      "msbuildProject": "../WebApiBackgroundServices.Services/WebApiBackgroundServices.Services.csproj"
+      "path": "../WebApiBackgroundServices.Services/worker.csproj",
+      "msbuildProject": "../WebApiBackgroundServices.Services/worker.csproj"
     }
   },
   "projectFileDependencyGroups": {
     ".NETCoreApp,Version=v3.1": [
-      "Domain >= 1.0.0",
       "Microsoft.EntityFrameworkCore >= 5.0.10",
       "Microsoft.EntityFrameworkCore.SqlServer >= 5.0.10",
       "Microsoft.EntityFrameworkCore.Tools >= 5.0.10",
       "Microsoft.Extensions.Hosting >= 5.0.0",
       "RabbitMQ.Client >= 6.2.2",
-      "Services >= 1.0.0",
-      "WebApiBackgroundServices.Services >= 1.0.0"
+      "core >= 1.0.0",
+      "worker >= 1.0.0"
     ]
   },
   "packageFolders": {
@@ -6589,9 +6568,9 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\maria\\source\\repos\\BankTransfer\\BankTransfer\\BankTransfer.csproj",
-      "projectName": "BankTransfer",
-      "projectPath": "C:\\Users\\maria\\source\\repos\\BankTransfer\\BankTransfer\\BankTransfer.csproj",
+      "projectUniqueName": "C:\\Users\\maria\\source\\repos\\BankTransfer\\BankTransfer\\BankTransferApi.csproj",
+      "projectName": "BankTransferApi",
+      "projectPath": "C:\\Users\\maria\\source\\repos\\BankTransfer\\BankTransfer\\BankTransferApi.csproj",
       "packagesPath": "C:\\Users\\maria\\.nuget\\packages\\",
       "outputPath": "C:\\Users\\maria\\source\\repos\\BankTransfer\\BankTransfer\\obj\\",
       "projectStyle": "PackageReference",
@@ -6614,14 +6593,11 @@
         "netcoreapp3.1": {
           "targetAlias": "netcoreapp3.1",
           "projectReferences": {
-            "C:\\Users\\maria\\source\\repos\\BankTransfer\\Domain\\Domain.csproj": {
-              "projectPath": "C:\\Users\\maria\\source\\repos\\BankTransfer\\Domain\\Domain.csproj"
+            "C:\\Users\\maria\\source\\repos\\BankTransfer\\Domain\\core.csproj": {
+              "projectPath": "C:\\Users\\maria\\source\\repos\\BankTransfer\\Domain\\core.csproj"
             },
-            "C:\\Users\\maria\\source\\repos\\BankTransfer\\Services\\Services.csproj": {
-              "projectPath": "C:\\Users\\maria\\source\\repos\\BankTransfer\\Services\\Services.csproj"
-            },
-            "C:\\Users\\maria\\source\\repos\\BankTransfer\\WebApiBackgroundServices.Services\\WebApiBackgroundServices.Services.csproj": {
-              "projectPath": "C:\\Users\\maria\\source\\repos\\BankTransfer\\WebApiBackgroundServices.Services\\WebApiBackgroundServices.Services.csproj"
+            "C:\\Users\\maria\\source\\repos\\BankTransfer\\WebApiBackgroundServices.Services\\worker.csproj": {
+              "projectPath": "C:\\Users\\maria\\source\\repos\\BankTransfer\\WebApiBackgroundServices.Services\\worker.csproj"
             }
           }
         }

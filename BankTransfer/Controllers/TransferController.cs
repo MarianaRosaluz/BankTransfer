@@ -1,16 +1,14 @@
-﻿using BankTransfer.dto;
-using Domain.Database.Enum;
-using Domain.Entities;
-using Domain.Repository;
+﻿using BankTransferApi.dto;
+using core.domain;
+using core.service.rabbitMQ;
+using core.service.repositories;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
-using RabbitMQ.Client;
-using Services.Services;
 using System;
 using System.Linq;
 using System.Net;
 
-namespace BankTransfer.Controllers
+namespace BankTransferApi.Controllers
 {
 
     [Route("api/fund-transfer/")]
