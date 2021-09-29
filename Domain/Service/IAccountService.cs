@@ -3,6 +3,9 @@ using System.Collections.Generic;
 using System.Threading.Tasks;
 using System.Net;
 using RestEase;
+using Microsoft.AspNetCore.Mvc;
+using System.Net.Http;
+using Microsoft.AspNetCore.Http;
 
 namespace Domain.services
 {
@@ -12,9 +15,9 @@ namespace Domain.services
          Task<List<AccountDto>> GetAccounts();
 
         [Get("/api/Account/{accountNumber}")]
-        Task<AccountDto> GetAccount([Path("accountNumber")] string accountNumber);
+        Task<Response<AccountDto>> GetAccount([Path("accountNumber")] string accountNumber);
 
         [Post("/api/Account")]
-        Task<HttpStatusCode> SetTransaction([Body]TransactionDto transaction);
+        Task<HttpContext> SetTransaction([Body]TransactionDto transaction);
     }
 }

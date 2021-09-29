@@ -8,7 +8,7 @@ using System.Text;
 
 namespace Domain.Repository
 {
-    public class TransferRepository
+    public class TransferRepository :ITransferRepository
     {
         IServiceScopeFactory _serviceScopeFactory;
 

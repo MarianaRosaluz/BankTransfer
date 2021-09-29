@@ -62,12 +62,11 @@ namespace BankTransfer.Controllers
 
                 var transfer = _dataContext.transfers.Where(x => x.uuid == transactionId).FirstOrDefault();
 
-                if(transfer.status == Status.Error)
+                if (transfer.status == Status.Error)
                 {
-                    return Ok(Enum.GetName(typeof(Status),transfer.status));
+                    return Ok(new {Status = Enum.GetName(typeof(Status), transfer.status), Message = transfer.message});
                 }
-                
-                return Ok(Enum.GetName(typeof(Status), transfer.status));
+                return Ok(new { Status = Enum.GetName(typeof(Status), transfer.status)});
             }
             catch (Exception ex)
             {

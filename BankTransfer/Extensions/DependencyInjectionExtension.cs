@@ -13,6 +13,7 @@ namespace BankTransfer.Extensions
         {
             service.AddTransient<IRabbitMqService, RabbitMqService>();
             service.AddTransient<ITransferProcessing, TransferProcessing>();
+            service.AddTransient<ITransferRepository, TransferRepository>();
         }
     }
 }

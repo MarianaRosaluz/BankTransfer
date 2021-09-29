@@ -7,9 +7,9 @@ namespace Domain.dto.Account
 {
     public class TransactionDto
     {
-        private string accountNumber { get; set; }
-        private double value { get; set; }
-        private string Type { get; set; }
+        public string accountNumber { get; set; }
+        public double value { get; set; }
+        public string Type { get; set; }
 
         public TransactionDto(string accountNumber, double value, string type)
         {

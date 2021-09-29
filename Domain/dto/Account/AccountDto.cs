@@ -6,9 +6,9 @@ namespace Domain.dto.Account
 {
     public class AccountDto
     {
-        private int id { get; set; }
-        private string accountNumber { get; set; }
-        private double balance { get; set; }
+        public int id { get; set; }
+        public string accountNumber { get; set; }
+        public double balance { get; set; }
 
         public AccountDto(int id, string accountNumber, double balance)
         {

@@ -77,11 +77,7 @@ namespace Services.Services
                     //logger
                     this.ReQueue();
                 }
-                finally
-                {
-                    //logger
-                    this.FinalizaQueue();
-                                }
+               
             };
             this.channel.BasicConsume(queue: queue,
                                  autoAck: false,

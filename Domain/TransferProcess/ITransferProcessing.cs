@@ -8,6 +8,6 @@ namespace Domain.TransferProcess
 {
     public interface ITransferProcessing
     {
-        public  Task<bool> ChangeStatus(Status status, Guid uuidTransfer, string message = null);
+        public  Task<bool> ProcessTransfer(Status status, Guid uuidTransfer, string message = null);
     }
 }

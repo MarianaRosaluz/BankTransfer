@@ -1,6 +1,7 @@
 ﻿using Domain.Database;
 using Domain.Database.Enum;
 using Domain.Entities;
+using Domain.Repository;
 using Domain.TransferProcess;
 using Microsoft.Extensions.Hosting;
 using Services.Services;
@@ -16,23 +17,30 @@ namespace WebApiBackgroundServices.Services
     {
         private readonly IRabbitMqService _rabbitMqService;
         private readonly ITransferProcessing _transferProcessing;
+        private ITransferRepository _transferRepository;
 
 
 
-        public ProcessMessageConsumer(IRabbitMqService rabbitMqService, ITransferProcessing transferProcessing)
+        public ProcessMessageConsumer(IRabbitMqService rabbitMqService, ITransferProcessing transferProcessing, ITransferRepository transferRepository)
         {
             _rabbitMqService = rabbitMqService;
             _transferProcessing = transferProcessing;
+            _transferRepository = transferRepository;
         }
         public  Task StartAsync(CancellationToken stoppingToken)
         {
-           
+            
             var message = _rabbitMqService.receiveMessage("transferQueue", async (ReadOnlyMemory<byte> body) => {
 
                 var message = Encoding.UTF8.GetString(body.ToArray());
                 var transfer = JsonSerializer.Deserialize<Transfer>(message);
 
-               _transferProcessing.ChangeStatus(Status.Processing,transfer.uuid);
+                _transferRepository.ChangeStatus(transfer.status, transfer.uuid);
+                var transferMade =  await _transferProcessing.ProcessTransfer(Status.Processing,transfer.uuid);
+                if (!transferMade)
+                    _rabbitMqService.ReQueue();
+                else
+                    _rabbitMqService.FinalizaQueue();
 
                 Console.WriteLine($"Transfer Number {transfer.accountOrigin}|{transfer.accountDestination}|{transfer.value:N2}", message);
 
