@@ -1057,8 +1057,8 @@
     },
     "core/1.0.0": {
       "type": "project",
-      "path": "../Domain/core.csproj",
-      "msbuildProject": "../Domain/core.csproj"
+      "path": "../core/core.csproj",
+      "msbuildProject": "../core/core.csproj"
     }
   },
   "projectFileDependencyGroups": {
@@ -1078,11 +1078,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\maria\\source\\repos\\BankTransfer\\WebApiBackgroundServices.Services\\worker.csproj",
+      "projectUniqueName": "C:\\Users\\maria\\source\\repos\\BankTransfer\\worker\\worker.csproj",
       "projectName": "worker",
-      "projectPath": "C:\\Users\\maria\\source\\repos\\BankTransfer\\WebApiBackgroundServices.Services\\worker.csproj",
+      "projectPath": "C:\\Users\\maria\\source\\repos\\BankTransfer\\worker\\worker.csproj",
       "packagesPath": "C:\\Users\\maria\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\maria\\source\\repos\\BankTransfer\\WebApiBackgroundServices.Services\\obj\\",
+      "outputPath": "C:\\Users\\maria\\source\\repos\\BankTransfer\\worker\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -1103,8 +1103,8 @@
         "netcoreapp3.1": {
           "targetAlias": "netcoreapp3.1",
           "projectReferences": {
-            "C:\\Users\\maria\\source\\repos\\BankTransfer\\Domain\\core.csproj": {
-              "projectPath": "C:\\Users\\maria\\source\\repos\\BankTransfer\\Domain\\core.csproj"
+            "C:\\Users\\maria\\source\\repos\\BankTransfer\\core\\core.csproj": {
+              "projectPath": "C:\\Users\\maria\\source\\repos\\BankTransfer\\core\\core.csproj"
             }
           }
         }

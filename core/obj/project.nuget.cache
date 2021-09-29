@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "n91OIbU+PKR0sAseEEcThE3voy1f0rGwmfUOysOc48CtTEjWMX2VVl4XS/c0mbuN0me1etzwu3sQQo4Z8zDKcA==",
+  "dgSpecHash": "iB8/CL1leJh0PnGGy8wUNSvPn0eYvPtXCxlzDFNWFrDBb9NX/KInhwe31DGlQgtsnWLOB/E86Gf8ez6ConKdqg==",
   "success": true,
-  "projectFilePath": "C:\\Users\\maria\\source\\repos\\BankTransfer\\Domain\\core.csproj",
+  "projectFilePath": "C:\\Users\\maria\\source\\repos\\BankTransfer\\core\\core.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\maria\\.nuget\\packages\\microsoft.aspnetcore.http.abstractions\\2.2.0\\microsoft.aspnetcore.http.abstractions.2.2.0.nupkg.sha512",
     "C:\\Users\\maria\\.nuget\\packages\\microsoft.aspnetcore.http.features\\2.2.0\\microsoft.aspnetcore.http.features.2.2.0.nupkg.sha512",

@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\maria\\source\\repos\\BankTransfer\\WebApiBackgroundServices.Services\\worker.csproj": {}
+    "C:\\Users\\maria\\source\\repos\\BankTransfer\\worker\\worker.csproj": {}
   },
   "projects": {
-    "C:\\Users\\maria\\source\\repos\\BankTransfer\\Domain\\core.csproj": {
+    "C:\\Users\\maria\\source\\repos\\BankTransfer\\core\\core.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\maria\\source\\repos\\BankTransfer\\Domain\\core.csproj",
+        "projectUniqueName": "C:\\Users\\maria\\source\\repos\\BankTransfer\\core\\core.csproj",
         "projectName": "core",
-        "projectPath": "C:\\Users\\maria\\source\\repos\\BankTransfer\\Domain\\core.csproj",
+        "projectPath": "C:\\Users\\maria\\source\\repos\\BankTransfer\\core\\core.csproj",
         "packagesPath": "C:\\Users\\maria\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\maria\\source\\repos\\BankTransfer\\Domain\\obj\\",
+        "outputPath": "C:\\Users\\maria\\source\\repos\\BankTransfer\\core\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -84,14 +84,14 @@
         }
       }
     },
-    "C:\\Users\\maria\\source\\repos\\BankTransfer\\WebApiBackgroundServices.Services\\worker.csproj": {
+    "C:\\Users\\maria\\source\\repos\\BankTransfer\\worker\\worker.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\maria\\source\\repos\\BankTransfer\\WebApiBackgroundServices.Services\\worker.csproj",
+        "projectUniqueName": "C:\\Users\\maria\\source\\repos\\BankTransfer\\worker\\worker.csproj",
         "projectName": "worker",
-        "projectPath": "C:\\Users\\maria\\source\\repos\\BankTransfer\\WebApiBackgroundServices.Services\\worker.csproj",
+        "projectPath": "C:\\Users\\maria\\source\\repos\\BankTransfer\\worker\\worker.csproj",
         "packagesPath": "C:\\Users\\maria\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\maria\\source\\repos\\BankTransfer\\WebApiBackgroundServices.Services\\obj\\",
+        "outputPath": "C:\\Users\\maria\\source\\repos\\BankTransfer\\worker\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -112,8 +112,8 @@
           "netcoreapp3.1": {
             "targetAlias": "netcoreapp3.1",
             "projectReferences": {
-              "C:\\Users\\maria\\source\\repos\\BankTransfer\\Domain\\core.csproj": {
-                "projectPath": "C:\\Users\\maria\\source\\repos\\BankTransfer\\Domain\\core.csproj"
+              "C:\\Users\\maria\\source\\repos\\BankTransfer\\core\\core.csproj": {
+                "projectPath": "C:\\Users\\maria\\source\\repos\\BankTransfer\\core\\core.csproj"
               }
             }
           }
