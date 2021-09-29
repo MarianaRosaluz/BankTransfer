@@ -12,12 +12,14 @@ namespace core.service.rabbitMQ
         private IConnection connection;
         private BasicDeliverEventArgs ea;
 
-        public  RabbitMqService()
+      
+        public void CreateConnection()
         {
             ConnectionFactory factory = new ConnectionFactory() { HostName = "localhost" };
             this.connection = factory.CreateConnection();
             this.channel = connection.CreateModel();
         }
+
         public void CloseConnection()
         {
             this.channel.Close();
@@ -52,16 +54,19 @@ namespace core.service.rabbitMQ
 
         public void FinalizaQueue()
         {
-            this.channel.BasicNack(this.ea.DeliveryTag, false, false);
+            this.channel.BasicAck(this.ea.DeliveryTag, false);
+            
         }
         public string receiveMessage(string queue, Action<ReadOnlyMemory<byte>> action)
         {
             string message = "";
+            this.channel.BasicQos(0,1,true);
             this.channel.QueueDeclare(queue: queue,
                                              durable: false,
                                              exclusive: false,
                                              autoDelete: false,
-                                             arguments: null);
+                                             arguments: null
+                                            );
 
             var consumer = new EventingBasicConsumer(channel);
             consumer.Received += (model, ea) =>

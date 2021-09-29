@@ -27,8 +27,9 @@ namespace worker.backgroundjob
         }
         public  Task StartAsync(CancellationToken stoppingToken)
         {
-            
-            var message = _rabbitMqService.receiveMessage("transferQueue", async (ReadOnlyMemory<byte> body) => {
+            _rabbitMqService.CreateConnection();
+
+            var message =  _rabbitMqService.receiveMessage("transferQueue", async (ReadOnlyMemory<byte> body) => {
 
                 var message = Encoding.UTF8.GetString(body.ToArray());
                 var transfer = JsonSerializer.Deserialize<Transfer>(message);
@@ -42,9 +43,10 @@ namespace worker.backgroundjob
                     _rabbitMqService.FinalizaQueue();
 
                 Console.WriteLine($"Transfer Number {transfer.accountOrigin}|{transfer.accountDestination}|{transfer.value:N2}", message);
-
+                Console.ReadKey();
             });
-            
+
+           
             return Task.CompletedTask;
         }
 
