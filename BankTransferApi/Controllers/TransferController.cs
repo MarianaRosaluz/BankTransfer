@@ -38,7 +38,7 @@ namespace BankTransferApi.Controllers
                 _dataContext.Add(transfer);
                 _dataContext.SaveChanges();
                 _rabbitMqService.sendMessage("transferQueue", transfer);
-
+                
                 return Accepted(new { transactionId = transfer.uuid });
 
 
@@ -46,7 +46,7 @@ namespace BankTransferApi.Controllers
             catch (Exception ex)
             {
                 _dataContext.Remove(transfer);
-                _logger.LogError("Erro ao tentar criar uma nova trnsferencia", ex);
+                _logger.LogError("Erro ao tentar criar uma nova transferencia", ex);
                 return StatusCode((int)HttpStatusCode.InternalServerError,ex.Message);
             }
         }
@@ -68,6 +68,7 @@ namespace BankTransferApi.Controllers
             }
             catch (Exception ex)
             {
+                _logger.LogError("Erro ao tentar Buscar o status de uma transferencia", ex);
                 return new StatusCodeResult(500);
             }
         }

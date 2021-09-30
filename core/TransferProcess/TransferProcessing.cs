@@ -3,6 +3,7 @@ using core.dto.convert;
 using core.service.accountService;
 using core.service.repositories;
 using core.TransferProcess.Validate;
+using Microsoft.Extensions.Logging;
 using RestEase;
 using System;
 using System.Linq;
@@ -13,8 +14,9 @@ namespace core.TransferProcess
     public class TransferProcessing: ITransferProcessing
     {
         ITransferRepository _transferRepository;
-        CovertTransferToTransactionDTO _covertTransferToTransactionDTO;
         IAccountService _accountService;
+        private ILogger<TransferProcessing> _logger;
+
         public TransferProcessing(ITransferRepository transferRepository)
         {
             _transferRepository = transferRepository;
@@ -52,6 +54,7 @@ namespace core.TransferProcess
                     }
                     catch (ApiException ex)
                     {
+                        _logger.LogError("Erro ao fazer a transferencia", ex);
                         return false;
 
                     }
@@ -62,6 +65,7 @@ namespace core.TransferProcess
             }
             catch (Exception ex)
             {
+                _logger.LogError("Erro no processamento da mensagem", ex);
                 return false;
             }
 
