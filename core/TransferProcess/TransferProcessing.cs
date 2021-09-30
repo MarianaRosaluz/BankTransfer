@@ -14,10 +14,11 @@ namespace core.TransferProcess
     {
         ITransferRepository _transferRepository;
         CovertTransferToTransactionDTO _covertTransferToTransactionDTO;
+        IAccountService _accountService;
         public TransferProcessing(ITransferRepository transferRepository)
         {
             _transferRepository = transferRepository;
-
+            _accountService = RestClient.For<IAccountService>("http://localhost:5550");
         }
 
         public async Task<bool> ProcessTransfer(Status status, Guid uuidTransfer, string message = null)
@@ -25,7 +26,7 @@ namespace core.TransferProcess
 
             try
             {
-                IAccountService _accountService = RestClient.For<IAccountService>("http://localhost:5550");
+              
                 var transfer = _transferRepository.GetTransferbyUUID(uuidTransfer);
 
                 var responseGETlIST = await _accountService.GetAccounts();
@@ -36,17 +37,18 @@ namespace core.TransferProcess
                     return true;
 
 
-
                 CovertTransferToTransactionDTO _covertTransferToTransactionDTO = new CovertTransferToTransactionDTO();
                 var transactions = _covertTransferToTransactionDTO.CovertTransferToTransactionDTOList(transfer);
+
+                if (transactions.Count == 0)
+                    return false;
+
                 foreach (var trans in transactions)
                 {
                     try
                     {
-
-                        var response = await _accountService.SetTransaction(trans);
+                      var response = await _accountService.SetTransaction(trans);
                        
-
                     }
                     catch (ApiException ex)
                     {
