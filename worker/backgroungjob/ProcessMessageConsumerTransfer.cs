@@ -1,4 +1,5 @@
 ﻿using core.domain;
+using core.service.accountService;
 using core.service.rabbitMQ;
 using core.service.repositories;
 using core.TransferProcess;
@@ -16,10 +17,11 @@ namespace worker.backgroundjob
         private readonly IRabbitMqService _rabbitMqService;
         private readonly ITransferProcessing _transferProcessing;
         private ITransferRepository _transferRepository;
+       
 
 
-
-        public ProcessMessageConsumerTransfer(IRabbitMqService rabbitMqService, ITransferProcessing transferProcessing, ITransferRepository transferRepository)
+        public ProcessMessageConsumerTransfer(IRabbitMqService rabbitMqService, ITransferProcessing transferProcessing, 
+                                              ITransferRepository transferRepository)
         {
             _rabbitMqService = rabbitMqService;
             _transferProcessing = transferProcessing;
@@ -52,7 +54,7 @@ namespace worker.backgroundjob
 
         public Task StopAsync(CancellationToken stoppingToken)
         {
-            throw new NotImplementedException();
+            return Task.CompletedTask;
         }
        
     }

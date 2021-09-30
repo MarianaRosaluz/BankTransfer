@@ -1,4 +1,5 @@
-﻿using core.service.rabbitMQ;
+﻿using core.service.accountService;
+using core.service.rabbitMQ;
 using core.service.repositories;
 using core.TransferProcess;
 using Microsoft.Extensions.DependencyInjection;
