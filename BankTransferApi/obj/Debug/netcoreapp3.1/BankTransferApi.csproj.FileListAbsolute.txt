@@ -213,3 +213,8 @@ C:\Users\maria\source\repos\BankTransfer\BankTransferApi\bin\Debug\netcoreapp3.1
 C:\Users\maria\source\repos\BankTransfer\BankTransferApi\bin\Debug\netcoreapp3.1\Serilog.Sinks.File.dll
 C:\Users\maria\source\repos\BankTransfer\BankTransferApi\bin\Debug\netcoreapp3.1\Serilog.Sinks.MSSqlServer.dll
 C:\Users\maria\source\repos\BankTransfer\BankTransferApi\bin\Debug\netcoreapp3.1\Serilog.Sinks.PeriodicBatching.dll
+C:\Users\maria\source\repos\BankTransfer\BankTransferApi\bin\Debug\netcoreapp3.1\Microsoft.OpenApi.dll
+C:\Users\maria\source\repos\BankTransfer\BankTransferApi\bin\Debug\netcoreapp3.1\Swashbuckle.AspNetCore.Swagger.dll
+C:\Users\maria\source\repos\BankTransfer\BankTransferApi\bin\Debug\netcoreapp3.1\Swashbuckle.AspNetCore.SwaggerGen.dll
+C:\Users\maria\source\repos\BankTransfer\BankTransferApi\bin\Debug\netcoreapp3.1\Swashbuckle.AspNetCore.SwaggerUI.dll
+C:\Users\maria\source\repos\BankTransfer\BankTransferApi\obj\Debug\netcoreapp3.1\BankTransferApi.MvcApplicationPartsAssemblyInfo.cs

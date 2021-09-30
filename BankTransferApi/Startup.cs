@@ -23,10 +23,17 @@ namespace BankTransferApi
             services.AddControllers();
             services.AddDbContext<DataContext>(opcoes => opcoes.UseSqlServer(Configuration["Data:ConnectionStrings:DefaultConnection"]));
             DependencyInjectionExtension.ConfigureService(services);
+            services.AddSwaggerGen();
         }
 
         public void Configure(IApplicationBuilder app, IWebHostEnvironment env)
         {
+            app.UseSwagger(); app.UseSwaggerUI(c =>
+            {
+                c.SwaggerEndpoint("/swagger/v1/swagger.json", "Bank Transfer API V1");
+
+            });
+
             if (env.IsDevelopment())
             {
                 app.UseDeveloperExceptionPage();
